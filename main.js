@@ -84,7 +84,7 @@ var myInput = document.getElementById("input"),
     // container fish 
     var myInputFish = document.getElementById("inputFish"),
     myOutputFish = document.getElementById("outputFish"),
-    myPFish = document.getElementById("qstBird"),
+    myPFish = document.getElementById("qstFish"),
     myBtnOrange = document.getElementById("checkFish");
     myBtnOrange.onclick = function(){
         if((myInputFish.value == "a fish" )||(myInputFish.value == "the fish" )){
@@ -105,24 +105,26 @@ var myInput = document.getElementById("input"),
    
 
 
-    // Hadi fonction kat3tiha f parametre max o katreturni lk nombre men 0 hta lmax li 3titih
+    
  function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
       }
-      //Kanjbed element parent b className o kandir [0] hit imken ikon kter mn classe whda b dik smia
+     
      let tab=document.getElementsByClassName("parent")[0]; 
-     // Kentreturni Text dyal wahd child b indice li ghatreturnih dik fonction li saybt 
+     
       tab.children[getRandomInt(5)].setAttribute("class" , "done");
-     // kanAfficher f wahd div kharja mne parent : 
+      
+     
     
 
 
 
      var btnNext = document.querySelector('.next'),
-        classListNext = ["appelNext", "orangeNext", "birdNext", "fishNext", "bearNext"],
-        randomNext = Math.floor(Math.random() * classListNext.length);
+        classListNext = ["appelNext", "orangeNext", "birdNext", "fishNext", "bearNext"];
+        
         btnNext.onclick = function(){
-            document.getElementById("container").setAttribute("class", randomNext[classListNext])
+            randomNext = Math.floor(Math.random() * classListNext.length);
+            document.getElementsByClassName("container").setAttribute("class", randomNext[classListNext])
         }
 
     var text = document.querySelector('h1'),
